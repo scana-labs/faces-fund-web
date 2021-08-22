@@ -40,7 +40,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Design
-UX is built using [tailwindcss](https://tailwindcss.com/). Ask Caleb if you want access to components. All icons are from [simpleicons](https://simpleicons.org/).
+UX is built using [tailwindcss](https://tailwindcss.com/). Ask Caleb if you want access to components. All icons are from [simpleicons](https://simpleicons.org/). Timeline - https://codepen.io/paulhbarker/pen/apvGdv/
 
 ## Learn More
 
