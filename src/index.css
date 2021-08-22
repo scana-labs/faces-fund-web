@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@-webkit-keyframes fade-in {
+	0% {
+	opacity:0
+	}
+	100% {
+	opacity:1
+	}
+}
+
+@keyframes fade-in {
+	0% {
+	opacity: 0
+	}
+	100% {
+	opacity: 1
+	}
+}
+
+@keyframes text-clip {
+	from {
+	clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+	}
+	to {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+}
+
+@keyframes outer-left {
+	from {
+	transform: translateX(50%);
+	}
+	to {
+	transform: none;
+	}
+}
+
+@keyframes inner-left {
+	from {
+	transform: translateX(-50%);
+	}
+	to {
+	transform: none;
+	}
+}
+
+	.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both}
+
+.header,
+.sub-header {
+	animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.header {
+	// start
+	> .cafe-inner {
+	display: inline-block;
+	}
+}
+
+.header-inner {
+	display: inline-block;
+	animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.sub-header-inner {
+	animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title {
+	animation: outer-left 1s 1s ease both;
+}
+
+.title-inner {
+	display: inline-block;
+	animation: inner-left 1s 1s ease both;
+}
