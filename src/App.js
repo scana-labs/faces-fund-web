@@ -1,18 +1,23 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, MenuIcon, XIcon, ScaleIcon } from '@heroicons/react/outline'
+import { GlobeIcon, MenuIcon, XIcon, ScaleIcon, UserGroupIcon, SparklesIcon } from '@heroicons/react/outline'
 
-import headphoneHeart from './assets/headphone-heart.png';
-import pinkBeard from './assets/pink-beard.png';
-import tearPizza from './assets/tear-pizza.png';
+import blueFlame from './assets/blue-flame.png';
+import chefDrool from './assets/chef-drool.png';
+import greenHatHeart from './assets/green-hat-heart.png';
+
+import albertToken from './assets/gold-king-pizza.png';
+import andrewToken from './assets/mask-headphone.png';
+import calebToken from './assets/straw-hat-gum.png';
+import shivaalToken from './assets/crown-pizza-3d.png';
 
 import './App.css';
 import Timeline from './Timeline';
 
 const navigation = [
-  { name: 'Collection', href: '#collection' },
   { name: 'Team', href: '#team' },
-  { name: 'Roadmap', href: '#' },
+  { name: 'Collection', href: '#collection' },
+  { name: 'Roadmap', href: '#roadmap' },
   { name: 'FAQ', href: '#faq' },
 ];
 const footerNav = {
@@ -25,7 +30,7 @@ const footerNav = {
   social: [
     {
       name: 'Twitter',
-      href: '#',
+      href: 'https://twitter.com/thefacesfund',
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -67,8 +72,8 @@ const products = [
     name: '#0001',
     href: '#',
     price: '0.08eth',
-    description: 'Teardrop with pizza',
-    imageSrc: tearPizza,
+    description: 'Viking hat diamond eyes fire breathing',
+    imageSrc: blueFlame,
     imageAlt: '',
   },
   {
@@ -76,8 +81,8 @@ const products = [
     name: '#0002',
     href: '#',
     price: '0.08eth',
-    description: 'Pink face with beard',
-    imageSrc: pinkBeard,
+    description: 'Chef hat sunglasses drool',
+    imageSrc: chefDrool,
     imageAlt: '',
   },
   {
@@ -85,8 +90,8 @@ const products = [
     name: '#0003',
     href: '#',
     price: '0.08eth',
-    description: 'Headphones with heart',
-    imageSrc: headphoneHeart,
+    description: 'Leprechaun hat green nose heart kiss',
+    imageSrc: greenHatHeart,
     imageAlt: '',
   },
 ];
@@ -94,29 +99,29 @@ const features = [
   {
     name: 'Community Driven Philanthropy',
     description: 'We are the first DAO Generative Art NFT project focused solely on philanthropy.',
-    icon: GlobeAltIcon,
+    icon: GlobeIcon,
   },
   {
-    name: 'No hidden fees',
+    name: 'Creators take nothing up front',
     description: '100% of the initial sales* are added to a fund that will only be donated to certified 501(c)(3) organizations.',
-    icon: ScaleIcon,
+    icon: SparklesIcon,
   },
   {
     name: 'Voting',
     description: 'Every two weeks, token holders will submit and vote on which charities to donate to',
-    icon: LightningBoltIcon,
+    icon: ScaleIcon,
   },
   {
     name: 'Charity Network',
     description: 'The fund will grow through partnerships with other NFT projects.',
-    icon: AnnotationIcon,
+    icon: UserGroupIcon,
   },
 ]
 const people = [
   {
     name: 'Albert',
     role: 'Artist and community manager',
-    imageUrl: 'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: albertToken,
     bio: 'Stanford Computer Science Bachelors and Masters. Silicon Valley Product Manager. Avid NFT collector who enjoys supporting projects with positive impact in the larger community.',
     community: 'Started a previous education nonprofit FairEd which partnered with Teach for America',
     charity: 'Sjogrens Foundation',
@@ -125,7 +130,7 @@ const people = [
   {
     name: 'Shivaal',
     role: 'Developer and community manager',
-    imageUrl: 'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: shivaalToken,
     bio: 'Software engineer at a stealth startup. Previously engineering and machine learning at Google and Scale AI. Bachelor’s and Master’s in Computer Science from Stanford. Developer and community manager for The Faces Fund.',
     community: 'Founded Stanford’s annual health hackathon to bridge the gap between medicine and technological innovations, a recurring event now in its sixth year, engaging 300 students annually.',
     charity: 'GiveWell’s Maximum Impact Fund',
@@ -134,7 +139,7 @@ const people = [
   {
     name: 'Andrew',
     role: 'Developer',
-    imageUrl: 'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: andrewToken,
     bio: 'Greatest baller to ever live. Once crossed Allen Iverson so hard AI retired.',
     charity: 'Sesame Street',
     twitterUrl: 'https://twitter.com/azfnft',
@@ -142,7 +147,7 @@ const people = [
   {
     name: 'Caleb',
     role: 'Developer',
-    imageUrl: 'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    imageUrl: calebToken,
     bio: 'Cal Poly SLO Computer Science. Full stack web developer with a passion for community and education.',
     community: 'Developed and taught computer science curriculum at a prison. Taught inner-city youth programming and entrepreneurship. Helped local farms source and receive government grants and improve operation.',
     charity: 'TBD',
@@ -222,7 +227,7 @@ const App = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden">
+          <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden z-50">
             <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
@@ -257,7 +262,7 @@ const App = () => {
         </Transition>
       </Popover>
       <main>
-        <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden h-48 md:h-full">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -276,33 +281,6 @@ const App = () => {
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="collection" className="bg-white">
-          <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 id="products-heading" className="sr=only">
-              The Collection
-            </h2>
-
-            <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
-              {products.map((product) => (
-                <a key={product.id} href={product.href} className="group">
-                  <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
-                    <img
-                      src={product.imageSrc}
-                      alt={product.imageAlt}
-                      className="w-full h-full object-center object-cover group-hover:opacity-75"
-                    />
-                  </div>
-                  <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-                    <h3>{product.name}</h3>
-                    <p>{product.price}</p>
-                  </div>
-                  <p className="mt-1 text-sm italic text-gray-500">{product.description}</p>
-                </a>
-              ))}
             </div>
           </div>
         </div>
@@ -362,7 +340,7 @@ const App = () => {
                           <p className="text-gray-500">{person.bio}</p>
                         </div>
                         <div className="text-lg">
-                          <p className="text-gray-500">{person.charity}</p>
+                          <p className="text-gray-500">Charity of choice: {person.charity}</p>
                         </div>
 
                         <ul className="flex space-x-5">
@@ -383,6 +361,34 @@ const App = () => {
             </div>
           </div>
         </div>
+
+        <div id="collection" className="bg-white">
+          <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h1 id="products-heading" className="sr=only">
+              The Collection
+            </h1>
+
+            <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
+              {products.map((product) => (
+                <a key={product.id} href={product.href} className="group">
+                  <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
+                    <img
+                      src={product.imageSrc}
+                      alt={product.imageAlt}
+                      className="w-full h-full object-center object-cover group-hover:opacity-75"
+                    />
+                  </div>
+                  <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
+                    <h3>{product.name}</h3>
+                    <p>{product.price}</p>
+                  </div>
+                  <p className="mt-1 text-sm italic text-gray-500">{product.description}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
 
         <div id="roadmap" className="bg-gray-50 overflow-hidden">
           <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -414,6 +420,7 @@ const App = () => {
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                   Roadmap
                 </h2>
+                <p>We’ll continue working on ways to bring a high level of utility to our token holders — we are excited to surprise y’all.</p>
               </div>
               <Timeline />
             </div>
@@ -464,7 +471,7 @@ const App = () => {
                 </a>
               ))}
             </div>
-            <p className="mt-8 text-center text-base text-gray-400">&copy; 2021 Scana Labs All rights reserved.</p>
+            <p className="mt-8 text-center text-base text-gray-400">&copy; 2021 Cipher Labs All rights reserved.</p>
           </div>
         </footer>
       </main>
