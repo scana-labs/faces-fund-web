@@ -1,31 +1,23 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { GlobeIcon, MenuIcon, XIcon, ScaleIcon, UserGroupIcon, SparklesIcon } from '@heroicons/react/outline'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
-import blueFlame from './assets/blue-flame.png';
-import chefDrool from './assets/chef-drool.png';
-import greenHatHeart from './assets/green-hat-heart.png';
-
-import albertToken from './assets/gold-king-pizza.png';
-import andrewToken from './assets/mask-headphone.png';
-import calebToken from './assets/straw-hat-gum.png';
-import shivaalToken from './assets/crown-pizza-3d.png';
+import Collection from './Collection';
+import FAQ from './FAQ';
+import Features from './Features';
+import Footer from './Footer';
+import Roadmap from './Roadmap';
+import Team from './Team';
+import collage from './assets/collage.jpg';
 
 import './App.css';
-import Timeline from './Timeline';
 
-const navigation = [
-  { name: 'Team', href: '#team' },
-  { name: 'Collection', href: '#collection' },
-  { name: 'Roadmap', href: '#roadmap' },
-  { name: 'FAQ', href: '#faq' },
-];
-const footerNav = {
+const navigation = {
   main: [
-    { name: 'Collection', href: '#' },
-    { name: 'Team', href: '#' },
-    { name: 'Roadmap', href: '#' },
-    { name: 'FAQ', href: '#' },
+    { name: 'Team', href: '#team' },
+    { name: 'Collection', href: '#collection' },
+    { name: 'Roadmap', href: '#roadmap' },
+    { name: 'FAQ', href: '#faq' },
   ],
   social: [
     {
@@ -51,135 +43,12 @@ const footerNav = {
         </svg>
       ),
     },
-    {
-      name: 'GitHub',
-      href: '#',
-      icon: (props) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-            clipRule="evenodd"
-          />
-        </svg>
-      ),
-    },
   ],
 };
-const products = [
-  {
-    id: 1,
-    name: '#0001',
-    href: '#',
-    price: '0.08eth',
-    description: 'Viking hat diamond eyes fire breathing',
-    imageSrc: blueFlame,
-    imageAlt: '',
-  },
-  {
-    id: 2,
-    name: '#0002',
-    href: '#',
-    price: '0.08eth',
-    description: 'Chef hat sunglasses drool',
-    imageSrc: chefDrool,
-    imageAlt: '',
-  },
-  {
-    id: 3,
-    name: '#0003',
-    href: '#',
-    price: '0.08eth',
-    description: 'Leprechaun hat green nose heart kiss',
-    imageSrc: greenHatHeart,
-    imageAlt: '',
-  },
-];
-const features = [
-  {
-    name: 'Community Driven Philanthropy',
-    description: 'We are the first DAO Generative Art NFT project focused solely on philanthropy.',
-    icon: GlobeIcon,
-  },
-  {
-    name: 'Creators take nothing up front',
-    description: '100% of the initial sales* are added to a fund that will only be donated to certified 501(c)(3) organizations.',
-    icon: SparklesIcon,
-  },
-  {
-    name: 'Voting',
-    description: 'Every two weeks, token holders will submit and vote on which charities to donate to',
-    icon: ScaleIcon,
-  },
-  {
-    name: 'Charity Network',
-    description: 'The fund will grow through partnerships with other NFT projects.',
-    icon: UserGroupIcon,
-  },
-]
-const people = [
-  {
-    name: 'Albert',
-    role: 'Artist and community manager',
-    imageUrl: albertToken,
-    bio: 'Stanford Computer Science Bachelors and Masters. Silicon Valley Product Manager. Avid NFT collector who enjoys supporting projects with positive impact in the larger community.',
-    community: 'Started a previous education nonprofit FairEd which partnered with Teach for America',
-    charity: 'Sjogrens Foundation',
-    twitterUrl: 'https://twitter.com/azfnft',
-  },
-  {
-    name: 'Shivaal',
-    role: 'Developer and community manager',
-    imageUrl: shivaalToken,
-    bio: 'Software engineer at a stealth startup. Previously engineering and machine learning at Google and Scale AI. Bachelor’s and Master’s in Computer Science from Stanford. Developer and community manager for The Faces Fund.',
-    community: 'Founded Stanford’s annual health hackathon to bridge the gap between medicine and technological innovations, a recurring event now in its sixth year, engaging 300 students annually.',
-    charity: 'GiveWell’s Maximum Impact Fund',
-    twitterUrl: 'https://twitter.com/shivaalroy',
-  },
-  {
-    name: 'Andrew',
-    role: 'Developer',
-    imageUrl: andrewToken,
-    bio: 'Greatest baller to ever live. Once crossed Allen Iverson so hard AI retired.',
-    charity: 'Sesame Street',
-    twitterUrl: 'https://twitter.com/azfnft',
-  },
-  {
-    name: 'Caleb',
-    role: 'Developer',
-    imageUrl: calebToken,
-    bio: 'Cal Poly SLO Computer Science. Full stack web developer with a passion for community and education.',
-    community: 'Developed and taught computer science curriculum at a prison. Taught inner-city youth programming and entrepreneurship. Helped local farms source and receive government grants and improve operation.',
-    charity: 'TBD',
-    twitterUrl: 'https://twitter.com/azfnft',
-  },
-];
-const faqs = [
-  {
-    question: 'How will this project continue to add in funds?',
-    answer: 'Beyond the initial fund enabled by the sales, we will be partnering with new #NFT projects to have a % of their sales donated to our fund. We aim to be the pre-eminent Philanthropy-driven NFT project in this space so other projects will want to partner with us.',
-  },
-  {
-    question: 'Are you a 501(c)(3)?',
-    answer: 'Unfortunately we are not, so your purchase of the token is not tax-deductible. We are exploring things on the legal side though.',
-  },
-  {
-    question: 'Is the donation written in the smart contract?',
-    answer: 'We decided not to write the donation in the smart contract because it allows a bit more flexibility for how much we allocate to charity each week and which charities we can donate too. Every two weeks, we will post on Twitter and Discord the donation transaction etherscan links to prove each donation. Finally, we’re very transparent about who we are on all social media platforms.',
-  },
-  {
-    question: 'Why 3K tokens at 0.08ETH?',
-    answer: 'We believe this is the right balance of having a tight knit community while still being able to make a massive contribution to society. We’ve seen how powerful a tight knit NFT community can be and hope to create one through scarcity and by bringing together like minded individuals.',
-  },
-  {
-    question: 'What about royalties for the project?',
-    answer: '5% of all secondary sales will be given back to the team to support underlying infrastructure, add in necessary community mods and more. This aligns our incentives with our token holders to continue bringing value to the community.',
-  }
-];
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-900 relative overflow-hidden">
+    <div className="min-h-screen bg-blue-400 relative overflow-hidden">
       <Popover as="header" className="relative">
         <div className="pt-6">
           <nav
@@ -192,7 +61,7 @@ const App = () => {
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    src="/logo512.png"
                     alt=""
                   />
                 </a>
@@ -204,13 +73,19 @@ const App = () => {
                 </div>
               </div>
               <div className="hidden space-x-8 md:flex md:ml-10">
-                {navigation.map((item) => (
+                {navigation.main.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     className="text-base font-medium text-white hover:text-gray-300"
                   >
                     {item.name}
+                  </a>
+                ))}
+                {navigation.social.map((item) => (
+                  <a key={item.name} href={item.href} className="text-white hover:text-gray-300">
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
                 ))}
               </div>
@@ -246,7 +121,7 @@ const App = () => {
               </div>
               <div className="pt-5 pb-6">
                 <div className="px-2 space-y-1">
-                  {navigation.map((item) => (
+                  {navigation.main.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -255,13 +130,20 @@ const App = () => {
                       {item.name}
                     </a>
                   ))}
+                  {navigation.social.map((item) => (
+                    <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                      <span className="sr-only">{item.name}</span>
+                      <item.icon className="h-6 w-6" aria-hidden="true" />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
           </Popover.Panel>
         </Transition>
       </Popover>
-      <main>
+
+      <main id="main">
         <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden h-48 md:h-full">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
@@ -271,209 +153,36 @@ const App = () => {
                     <span className="header-inner block">The Faces Fund</span>
                   </h1>
                   <div className="sub-header">
-                    <p className="sub-header-inner mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                      Community driven philanthropy
+                    <p className="sub-header-inner mt-3 text-base text-gray-100 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                      The Faces Fund is a collection of 1500 art pieces generated from a variety of hand-drawn traits built with the goal of community philanthropy.
+                      Every time a Face Token is sold a percentage of royalties (3% of secondary sales) is sent to a charity fund.
+                      Token holders have the opportunity to submit and vote on how the charity fund is allocated each week.
+                      Those that participate in the submission and voting process will be eligible to win ETH from the charity fund.
+                      The community wins when charities win.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+              <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative flex justify-items-center items-center">
+                <div id="collage" className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                  <img src={collage} alt="Token Collage"/>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="lg:text-center">
-              <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                A new way to donate and fund projects 
-              </p>
-              <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-              </p>
-            </div>
+        <Features />
 
-            <div className="mt-10">
-              <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative">
-                    <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                        <feature.icon className="h-6 w-6" aria-hidden="true" />
-                      </div>
-                      <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
-                    </dt>
-                    <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-        </div>
+        <Collection />
 
-        <div id="team" className="bg-white">
-          <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-            <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
-              <div className="space-y-5 sm:space-y-4">
-                <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Team</h2>
-                <p className="text-xl text-gray-500">
-                  We are close friends with industry experience from working at top tiered tech companies (Google, Microsoft, Amazon, etc) and recently graduated from Stanford, Berkeley and Cal Poly. Through creating high-utility NFT projects, we hope to make a lasting impact in the communities around us.
-                </p>
-              </div>
-              <div className="lg:col-span-2">
-                <ul
-                  className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8"
-                >
-                  {people.map((person) => (
-                    <li key={person.name}>
-                      <div className="space-y-4">
-                        <div className="aspect-w-3 aspect-h-2">
-                          <img className="object-cover shadow-lg rounded-lg" src={person.imageUrl} alt="" />
-                        </div>
-                        <div className="text-lg leading-6 font-medium space-y-1">
-                          <h3>{person.name}</h3>
-                          <p className="text-indigo-600">{person.role}</p>
-                        </div>
-                        <div className="text-lg">
-                          <p className="text-gray-500">{person.bio}</p>
-                        </div>
-                        <div className="text-lg">
-                          <p className="text-gray-500">Charity of choice: {person.charity}</p>
-                        </div>
+        <Roadmap />
 
-                        <ul className="flex space-x-5">
-                          <li>
-                            <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
-                              <span className="sr-only">Twitter</span>
-                              <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                              </svg>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Team />
 
-        <div id="collection" className="bg-white">
-          <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-            <h1 id="products-heading" className="sr=only">
-              The Collection
-            </h1>
+        <FAQ />
 
-            <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
-              {products.map((product) => (
-                <a key={product.id} href={product.href} className="group">
-                  <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
-                    <img
-                      src={product.imageSrc}
-                      alt={product.imageAlt}
-                      className="w-full h-full object-center object-cover group-hover:opacity-75"
-                    />
-                  </div>
-                  <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-                    <h3>{product.name}</h3>
-                    <p>{product.price}</p>
-                  </div>
-                  <p className="mt-1 text-sm italic text-gray-500">{product.description}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-
-        <div id="roadmap" className="bg-gray-50 overflow-hidden">
-          <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <svg
-              className="absolute top-0 left-full transform -translate-x-1/2 -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
-              width={404}
-              height={784}
-              fill="none"
-              viewBox="0 0 404 784"
-              aria-hidden="true"
-            >
-              <defs>
-                <pattern
-                  id="8b1b5f72-e944-4457-af67-0c6d15a99f38"
-                  x={0}
-                  y={0}
-                  width={20}
-                  height={20}
-                  patternUnits="userSpaceOnUse"
-                >
-                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-                </pattern>
-              </defs>
-              <rect width={404} height={784} fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)" />
-            </svg>
-
-            <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
-              <div className="lg:col-span-1">
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  Roadmap
-                </h2>
-                <p>We’ll continue working on ways to bring a high level of utility to our token holders — we are excited to surprise y’all.</p>
-              </div>
-              <Timeline />
-            </div>
-          </div>
-        </div>
-
-        <div id="faq" className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
-          <div className="lg:grid lg:grid-cols-3 lg:gap-8">
-            <div>
-              <h2 className="text-3xl font-extrabold text-white">Frequently asked questions</h2>
-              <p className="mt-4 text-lg text-gray-500">
-                Can’t find the answer you’re looking for? Reach out to our{' '}
-                <a href="#team" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  team
-                </a>{' '}
-                .
-              </p>
-            </div>
-            <div className="mt-12 lg:mt-0 lg:col-span-2">
-              <dl className="space-y-12">
-                {faqs.map((faq) => (
-                  <div key={faq.question}>
-                    <dt className="text-lg leading-6 font-medium text-white">{faq.question}</dt>
-                    <dd className="mt-2 text-base text-gray-500">{faq.answer}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-        </div>
-
-        <footer className="bg-gray-900">
-          <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-            <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-              {footerNav.main.map((item) => (
-                <div key={item.name} className="px-5 py-2">
-                  <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                    {item.name}
-                  </a>
-                </div>
-              ))}
-            </nav>
-            <div className="mt-8 flex justify-center space-x-6">
-              {footerNav.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-            <p className="mt-8 text-center text-base text-gray-400">&copy; 2021 Cipher Labs All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </div>
   );
