@@ -9,7 +9,7 @@ import greenHatHeart from './assets/green-hat-heart.png';
 import albertToken from './assets/gold-king-pizza.png';
 import andrewToken from './assets/mask-headphone.png';
 import calebToken from './assets/straw-hat-gum.png';
-import shivaalToken from './assets/crown-pizza-3d.png';
+import shivaalToken from './assets/shivaal.jpg';
 
 import './App.css';
 import Timeline from './Timeline';
