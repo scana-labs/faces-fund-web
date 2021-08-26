@@ -2,20 +2,24 @@ import './Timeline.css';
 
 const items = [
 	{
-		title: 'Featured Top Wallet Sales',
-		desc: 'The top 5 highest secondary sales wallets will be featured in our Top Donors Section of our website, in our discord and in a pinned tweet on our Twitter Profile.',
+		title: 'Minting Closes',
+		desc: 'On either sell out or 10 days after initial launch, we close minting forever for TFF.',
 	},
 	{
-		title: 'Featured Charity Recommenders',
-		desc: 'The token holders that submitted a charity recommendation that was in the top 3 that cycle will be featured on the website, Twitter and Discord.',
+		title: 'Weekly Donations Begin',
+		desc: 'The first weekly donation voting cycle begins — we’ll make this one huge with many charity winners and many community winners.',
 	},
 	{
-		title: 'Partnerships with future NFT projects',
-		desc: 'We will work with other projects to have either a % of sales donated to the fund and/or tokens set aside for TFF token holders.',
+		title: 'Featured Charities and Submitters',
+		desc: 'New sections on our website and Twitter that feature charities that we donate to and the wallets who submitted them.',
 	},
 	{
-		title: 'First dibs on future NFT projects and drops',
-		desc: 'That’s all we’ll say for now',
+		title: 'Community Partnerships',
+		desc: 'Partnerships with other artists and NFT projects to add money and potentially other tokens to the charity and community fund respectively.',
+	},
+	{
+		title: 'Future projects',
+		desc: 'Working on some future high utility NFT projects — The Faces Fund community will be pleasantly surprised and get a first row seat :)',
 	},
 ];
 
@@ -23,8 +27,8 @@ const Timeline = () => (
 	<div className="container">
 		{items.map((i, idx) => (
 			<div className="timeline-item text-lg" date-is='' key={idx}>
-				<h1>{i.title}:</h1>
-				<p>
+				<h1 className="text-white">{i.title}:</h1>
+				<p className="text-white">
 					{i.desc}
 				</p>
 			</div>

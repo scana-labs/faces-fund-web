@@ -21,15 +21,7 @@ const faqs = [
 },
 {
 	question: 'How many tokens and at what cost?',
-	answer: 'There will be 1,500 total tokens available. Mint price is at 0.08ETH each. From the 1,500 total tokens, we have pre allocated 96 random tokens to the community fund for giveaways. The 4 creators have each chosen their desired face token. All tokens except for the creator tokens are randomly generated.',
-},
-{
-	question: 'Are you a 501(c)(3)?',
-	answer: 'Unfortunately we are not, so your purchase of the token is not tax-deductible. We are exploring things on the legal side though.',
-},
-{
-	question: 'Is the donation written in the smart contract?',
-	answer: 'We decided not to write the donation in the smart contract because it allows a bit more flexibility for how much we allocate to charity each week and which charities we can donate too. Every two weeks, we will post on Twitter and Discord the donation transaction etherscan links to prove each donation. Finally, we’re very transparent about who we are on all social media platforms.',
+	answer: 'There will be 3,000 total tokens available. Mint price is at 0.05ETH each. From the 3,000 total tokens, we have pre allocated 196 random tokens to the community fund for giveaways. The 4 creators have each chosen their desired face token. All tokens except for the creator tokens are randomly generated.',
 },
 ];
 
@@ -38,7 +30,7 @@ const FAQ = () => (
 		<div className="lg:grid lg:grid-cols-3 lg:gap-8">
 		<div>
 			<h2 className="text-3xl font-extrabold text-white">Frequently asked questions</h2>
-			<p className="mt-4 text-lg text-gray-200">
+			<p className="mt-4 text-lg text-white">
 			Can’t find the answer you’re looking for? Reach out to our{' '}
 			<a href="#team" className="font-medium text-indigo-600 hover:text-indigo-500">
 				team

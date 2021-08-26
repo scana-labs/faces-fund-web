@@ -1,6 +1,6 @@
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 import Collection from './Collection';
 import FAQ from './FAQ';
@@ -31,7 +31,7 @@ const navigation = {
     },
     {
       name: 'Discord',
-      href: '#',
+      href: 'https://discord.gg/943yxUjvta',
       icon: (props) => (
         <svg fill="currentColor" role="img" viewBox="0 0 24 24" {...props}>
           <title>Discord</title>
@@ -66,7 +66,7 @@ const App = () => {
                   />
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
-                  <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                  <Popover.Button className="mobile-menu rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -83,7 +83,7 @@ const App = () => {
                   </a>
                 ))}
                 {navigation.social.map((item) => (
-                  <a key={item.name} href={item.href} className="text-white hover:text-gray-300">
+                  <a key={item.name} href={item.href} className="text-white hover:text-gray-300" target="_blank" rel="noreferrer">
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
@@ -108,12 +108,12 @@ const App = () => {
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src="/logo512.png"
                     alt=""
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                  <Popover.Button className="mobile-menu rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -131,7 +131,7 @@ const App = () => {
                     </a>
                   ))}
                   {navigation.social.map((item) => (
-                    <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                    <a key={item.name} href={item.href} className="block px-3 py-2 text-black hover:text-gray-500" target="_blank" rel="noreferrer">
                       <span className="sr-only">{item.name}</span>
                       <item.icon className="h-6 w-6" aria-hidden="true" />
                     </a>
@@ -144,7 +144,7 @@ const App = () => {
       </Popover>
 
       <main id="main">
-        <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden h-48 md:h-full">
+        <div className="main-content pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden md:h-full">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -153,12 +153,11 @@ const App = () => {
                     <span className="header-inner block">The Faces Fund</span>
                   </h1>
                   <div className="sub-header">
-                    <p className="sub-header-inner mt-3 text-base text-gray-100 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                      The Faces Fund is a collection of 1500 art pieces generated from a variety of hand-drawn traits built with the goal of community philanthropy.
-                      Every time a Face Token is sold a percentage of royalties (3% of secondary sales) is sent to a charity fund.
-                      Token holders have the opportunity to submit and vote on how the charity fund is allocated each week.
-                      Those that participate in the submission and voting process will be eligible to win ETH from the charity fund.
-                      The community wins when charities win.
+                    <p className="sub-header-inner mt-3 text-base text-white sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    The Faces Fund is a collection of 3,000 art pieces generated from a variety of hand-drawn traits built with the goal of community philanthropy.
+                    <br />
+                    <br />
+                    Token holders vote on how the charity fund is donated each week. Those who participate are eligible to win ETH.
                     </p>
                   </div>
                 </div>
