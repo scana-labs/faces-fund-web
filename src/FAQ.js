@@ -3,8 +3,12 @@ import { ChevronDownIcon } from '@heroicons/react/outline';
 
 const faqs = [
 	{
+		question: 'How are the initial sales allocated?',
+		answer: '51% of initial sales are added to the Charity Fund. 34% of initial sales are added to the Community Fund. 15% is used for marketing, giveaways and infrastructure for the project.',
+	},
+	{
 		question: 'How will token holders vote?',
-		answer: 'Every two weeks, we will hold a two step process. First, token holders will submit charities via Discord to be voted on by the rest of the community. We will vet the submitted charities, and then hold a vote using rank choice voting on Snapshot among token holders to decide on which charities receive donations from our fund.'
+		answer: 'Every two weeks, we will hold a two step process. First, token holders will submit charities via Discord to be voted on by the rest of the community. We will vet the submitted charities, and then hold a vote using rank choice voting on Snapshot among token holders to decide on which charities receive donations from our fund.',
 	},
 	{
 		question: 'Why don’t I just donate to my favorite cause directly?',
