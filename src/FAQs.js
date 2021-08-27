@@ -24,7 +24,7 @@ const faqs = [
 	},
 	{
 		question: 'Any other royalties?',
-		answer: 'The creators will receive 3% of all secondary sales. This helps with managing and growing The Faces Fund as a philanthropic brand in the NFT space, which ultimately will provide value to token holders and more charities around the world.',
+		answer: 'The creators will receive 2% of all secondary sales. This helps with managing and growing The Faces Fund as a philanthropic brand in the NFT space, which ultimately will provide value to token holders and more charities around the world.',
 	},
 	{
 		question: 'How many tokens and at what cost?',
