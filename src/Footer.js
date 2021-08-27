@@ -17,7 +17,7 @@ const footerNav = {
     },
     {
       name: 'Discord',
-      href: '#',
+      href: 'https://discord.gg/943yxUjvta',
       icon: (props) => (
         <svg fill="currentColor" role="img" viewBox="0 0 24 24" {...props}>
           <title>Discord</title>

@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "craco start",
+    "dev": "yarn start",
     "build": "craco build",
     "test": "craco test",
     "predeploy": "npm run build",
