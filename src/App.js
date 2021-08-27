@@ -3,7 +3,7 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 import Collection from './Collection';
-import FAQ from './FAQ';
+import FAQs from './FAQs';
 import Features from './Features';
 import Footer from './Footer';
 import Roadmap from './Roadmap';
@@ -179,7 +179,7 @@ const App = () => {
 
         <Roadmap />
 
-        <FAQ />
+        <FAQs />
 
         <Footer />
       </main>
