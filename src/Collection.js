@@ -10,7 +10,7 @@ const Collection = () => (
 			</h1>
 			<div className="space-y-6">
 				<div className="text-xl">
-					We are a group of close friends creating high-utility NFT projects in order to make a lasting impact in the communities around us.
+					144 of 3,000 randomly generated tokens on display for your viewing pleasure.
 				</div>
 
 				<div className="grid grid-cols-1 place-items-center gap-x-6 xl:gap-x-8">
