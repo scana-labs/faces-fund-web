@@ -19,7 +19,7 @@ const features = [
     icon: SparklesIcon,
   },
   {
-	name: 'Every token is valued',
+	name: 'Every Token Is Valued',
 	description: 'Each token equates to a single vote as well as membership into our amazing philanthropic-minded community.',
     icon: UserGroupIcon,
   },
