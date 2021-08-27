@@ -20,7 +20,7 @@ const faqs = [
 	},
 	{
 		question: 'How will this project continue to replenish the Community Fund?',
-		answer: 'Beyond the initial Community fund enabled by the initial sale, 3% of all secondary sales will be added directly to the community fund.',
+		answer: 'Beyond the initial Community fund enabled by the initial sale, 2% of all secondary sales will be added directly to the community fund.',
 	},
 	{
 		question: 'Any other royalties?',
@@ -28,7 +28,7 @@ const faqs = [
 	},
 	{
 		question: 'How many tokens and at what cost?',
-		answer: 'There will be 3,000 total tokens available. Mint price is at 0.05ETH each. From the 3,000 total tokens, we have pre allocated 196 random tokens to the community fund for giveaways. The 4 creators have each chosen their desired face token. All tokens except for the creator tokens are randomly generated.',
+		answer: 'There will be 3,000 total tokens available. Mint price is at 0.05ETH each. From the 3,000 total tokens, we have pre allocated 128 random tokens to the community fund for giveaways. The 4 creators have each chosen their desired face token. All tokens except for the creator tokens are randomly generated.',
 	},
 ];
 
