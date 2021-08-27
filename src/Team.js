@@ -1,6 +1,6 @@
-import albertToken from './assets/gold-king-pizza.png';
-import andrewToken from './assets/mask-headphone.png';
-import calebToken from './assets/straw-hat-gum.png';
+import albertToken from './assets/albert.jpg';
+import andrewToken from './assets/andrew.jpg';
+import calebToken from './assets/caleb.jpg';
 import shivaalToken from './assets/shivaal.jpg';
 
 const people = [
@@ -18,7 +18,7 @@ const people = [
     role: 'Developer and community manager',
     imageUrl: shivaalToken,
     bio: 'Software engineer at a stealth startup. Previously engineering and machine learning at Google and Scale AI. Stanford CS BS, MS.',
-    community: 'Founded Stanford’s annual health hackathon to bridge the gap between medicine and technological innovations, a recurring event now in its sixth year, engaging 300 students annually.',
+	community: 'Founded Stanford’s health hackathon to bridge gaps between medicine and technology, engaging 2,000 students over the last six years.',
     charity: 'GiveWell’s Maximum Impact Fund',
     twitterUrl: 'https://twitter.com/shivaalroy',
   },
