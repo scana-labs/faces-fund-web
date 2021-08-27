@@ -1,47 +1,21 @@
-import blueFlame from './assets/blue-flame.png';
-import chefDrool from './assets/chef-drool.png';
-import greenHatHeart from './assets/green-hat-heart.png';
+import collage from './assets/collage16x9.jpg';
 
-const products = [
-  {
-    id: 1,
-    description: 'Viking hat diamond eyes fire breathing',
-    imageSrc: blueFlame,
-    imageAlt: 'Blue Flame',
-  },
-  {
-    id: 2,
-    description: 'Chef hat sunglasses drool',
-    imageSrc: chefDrool,
-    imageAlt: 'Chef Drool',
-  },
-  {
-    id: 3,
-    description: 'Leprechaun hat green nose heart kiss',
-    imageSrc: greenHatHeart,
-    imageAlt: 'Green Hat Heart',
-  },
-];
+import './Collection.css';
 
 const Collection = () => (
 	<div id="collection">
-		<div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-			<h1 id="products-heading" className="text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl mb-5">
+		<div className="max-w-2xl mx-auto py-8 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+			<h1 id="products-heading" className="text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl mb-4">
 				The Collection
 			</h1>
+			<div className="space-y-6">
+				<div className="text-xl">
+					We are a group of close friends creating high-utility NFT projects in order to make a lasting impact in the communities around us.
+				</div>
 
-			<div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:gap-x-8">
-				{products.map((product, i) => (
-					<div className="group" key={i}>
-						<div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-2 sm:aspect-h-3">
-						<img
-							src={product.imageSrc}
-							alt={product.imageAlt}
-							className="w-full h-full object-center object-cover"
-						/>
-						</div>
-					</div>
-				))}
+				<div className="grid grid-cols-1 place-items-center gap-x-6 xl:gap-x-8">
+					<img id="token-collage" src={collage} alt="Token Collection Collage"/>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,7 @@ import Features from './Features';
 import Footer from './Footer';
 import Roadmap from './Roadmap';
 import Team from './Team';
-import collage from './assets/collage.jpg';
+import gif from './assets/148-167_40_04.gif';
 
 import './App.css';
 
@@ -164,7 +164,7 @@ const App = () => {
               </div>
               <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative flex justify-items-center items-center">
                 <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                  <img src={collage} alt="Token Collage"/>
+                  <img id="token-gif" src={gif} alt="Token GIF"/>
                 </div>
               </div>
             </div>

@@ -42,9 +42,9 @@ const people = [
 
 const Team = () => (
 	<div id="team">
-		<div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
-			<div className="space-y-12">
-				<h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Team</h2>
+		<div className="mx-auto py-8 px-4 max-w-7xl sm:px-6 lg:px-8">
+			<h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">Our Team</h1>
+			<div className="space-y-6">
 				<p className="text-xl">
 					We are a group of close friends creating high-utility NFT projects in order to make a lasting impact in the communities around us.
 				</p>

@@ -1,8 +1,3 @@
-#collage {
-  animation: 3s ease 0s normal forwards 1 fadein;
-  -webkit-animation: 3s ease 0s normal forwards 1 fadein;
-}
-
 #main {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -17,6 +12,11 @@
 .mobile-menu {
   background-color: #6466F1;
   color: white;
+}
+
+#token-gif {
+  border-radius: 2%;
+  height: 50vh;
 }
 
 @keyframes fadein {

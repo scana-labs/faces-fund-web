@@ -33,20 +33,16 @@ function classNames(...classes) {
 }
 
 const FAQ = () => (
-	<div id="faq" className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+	<div id="faq" className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
 		<div className="lg:grid lg:grid-cols-3 lg:gap-8">
 			<div>
-				<h2 className="text-3xl font-extrabold">Frequently asked questions</h2>
-				<p className="mt-4 text-lg">
-				Can’t find the answer you’re looking for? Reach out to our{' '}
-				<a href="#team" className="font-medium text-indigo-600 hover:text-indigo-500">
-					team
-				</a>{' '}
-				on Discord.
+				<h1 className="text-3xl font-extrabold mb-4">Frequently asked questions</h1>
+				<p className="text-lg">
+				Can’t find the answer you’re looking for? Reach out to our team on Discord.
 				</p>
 			</div>
-			<div className="mt-12 lg:mt-0 lg:col-span-2">
-				<dl className="mt-6 space-y-6 divide-y divide-black">
+			<div className="lg:mt-0 lg:col-span-2">
+				<dl className="space-y-6 divide-y divide-black">
 				{faqs.map((faq) => (
 				<Disclosure as="div" key={faq.question} className="pt-6">
 					{({ open }) => (
