@@ -1,28 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a19856c.chunk.css",
-    "main.js": "/static/js/main.f3c7b7cb.chunk.js",
-    "main.js.map": "/static/js/main.f3c7b7cb.chunk.js.map",
+    "main.css": "/static/css/main.1e9e3056.chunk.css",
+    "main.js": "/static/js/main.d7b0ec4c.chunk.js",
+    "main.js.map": "/static/js/main.d7b0ec4c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.eddc75ff.js",
     "runtime-main.js.map": "/static/js/runtime-main.eddc75ff.js.map",
-    "static/js/2.f66850e8.chunk.js": "/static/js/2.f66850e8.chunk.js",
-    "static/js/2.f66850e8.chunk.js.map": "/static/js/2.f66850e8.chunk.js.map",
+    "static/js/2.93de5c79.chunk.js": "/static/js/2.93de5c79.chunk.js",
+    "static/js/2.93de5c79.chunk.js.map": "/static/js/2.93de5c79.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.1a19856c.chunk.css.map": "/static/css/main.1a19856c.chunk.css.map",
-    "static/js/2.f66850e8.chunk.js.LICENSE.txt": "/static/js/2.f66850e8.chunk.js.LICENSE.txt",
-    "static/media/blue-flame.d809077a.png": "/static/media/blue-flame.d809077a.png",
-    "static/media/chef-drool.a84cbfd5.png": "/static/media/chef-drool.a84cbfd5.png",
-    "static/media/collage.1a9c5f06.jpg": "/static/media/collage.1a9c5f06.jpg",
-    "static/media/gold-king-pizza.8fbdc37c.png": "/static/media/gold-king-pizza.8fbdc37c.png",
-    "static/media/green-hat-heart.7a1ac918.png": "/static/media/green-hat-heart.7a1ac918.png",
-    "static/media/mask-headphone.c48fc96f.png": "/static/media/mask-headphone.c48fc96f.png",
-    "static/media/shivaal.f320ba9e.jpg": "/static/media/shivaal.f320ba9e.jpg",
-    "static/media/straw-hat-gum.bd3b6f92.png": "/static/media/straw-hat-gum.bd3b6f92.png"
+    "static/css/main.1e9e3056.chunk.css.map": "/static/css/main.1e9e3056.chunk.css.map",
+    "static/js/2.93de5c79.chunk.js.LICENSE.txt": "/static/js/2.93de5c79.chunk.js.LICENSE.txt",
+    "static/media/148-167_40_04.257a4f07.gif": "/static/media/148-167_40_04.257a4f07.gif",
+    "static/media/albert.a8d3f68f.jpg": "/static/media/albert.a8d3f68f.jpg",
+    "static/media/andrew.977df806.jpg": "/static/media/andrew.977df806.jpg",
+    "static/media/caleb.00ef7ed4.jpg": "/static/media/caleb.00ef7ed4.jpg",
+    "static/media/collage16x9.b1b7bef4.jpg": "/static/media/collage16x9.b1b7bef4.jpg",
+    "static/media/shivaal.024fd2a4.jpg": "/static/media/shivaal.024fd2a4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.eddc75ff.js",
-    "static/js/2.f66850e8.chunk.js",
-    "static/css/main.1a19856c.chunk.css",
-    "static/js/main.f3c7b7cb.chunk.js"
+    "static/js/2.93de5c79.chunk.js",
+    "static/css/main.1e9e3056.chunk.css",
+    "static/js/main.d7b0ec4c.chunk.js"
   ]
 }
