@@ -29,7 +29,7 @@ const Features = () => (
 	<div className="py-12">
 		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div className="lg:text-center">
-			<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+			<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
 			How does this project work? 
 			</p>
 		</div>
@@ -39,12 +39,12 @@ const Features = () => (
 			{features.map((feature) => (
 				<div key={feature.name} className="relative">
 				<dt>
-					<div className="absolute flex items-center justify-center h-12 w-12 rounded-md text-white feature-icon">
+					<div className="absolute flex items-center justify-center h-12 w-12 rounded-md feature-icon">
 					<feature.icon className="h-6 w-6" aria-hidden="true" />
 					</div>
-					<p className="ml-16 text-xl leading-6 font-medium text-white">{feature.name}</p>
+					<p className="ml-16 text-xl leading-6 font-medium">{feature.name}</p>
 				</dt>
-				<dd className="mt-2 ml-16 text-lg text-base text-white">{feature.description}</dd>
+				<dd className="mt-2 ml-16 text-lg text-base">{feature.description}</dd>
 				</div>
 			))}
 			</dl>

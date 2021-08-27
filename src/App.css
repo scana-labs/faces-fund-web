@@ -4,18 +4,18 @@
 }
 
 #main {
-  background-image: url('./assets/earth.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom right;
 }
 
-.main-content {
-  height: 28rem;
+.content {
+  background-color: #DAEDF4;
+  color: #333333;
 }
 
 .mobile-menu {
-  background-color: #6466f1;
+  background-color: #6466F1;
   color: white;
 }
 

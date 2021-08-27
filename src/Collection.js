@@ -24,9 +24,9 @@ const products = [
 ];
 
 const Collection = () => (
-	<div id="collection" className="">
+	<div id="collection">
 		<div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-			<h1 id="products-heading" className="text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl mb-5">
+			<h1 id="products-heading" className="text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl mb-5">
 				The Collection
 			</h1>
 

@@ -48,7 +48,7 @@ const navigation = {
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-blue-400 relative overflow-hidden">
+    <div className="content min-h-screen relative overflow-hidden">
       <Popover as="header" className="relative">
         <div className="pt-6">
           <nav
@@ -77,13 +77,13 @@ const App = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-base font-medium text-white hover:text-gray-300"
+                    className="text-base font-medium hover:text-gray-300"
                   >
                     {item.name}
                   </a>
                 ))}
                 {navigation.social.map((item) => (
-                  <a key={item.name} href={item.href} className="text-white hover:text-gray-300" target="_blank" rel="noreferrer">
+                  <a key={item.name} href={item.href} className="hover:text-gray-300" target="_blank" rel="noreferrer">
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
@@ -144,16 +144,16 @@ const App = () => {
       </Popover>
 
       <main id="main">
-        <div className="main-content pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden md:h-full">
+        <div className="flex items-center pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden h-screen">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                 <div className="lg:py-24">
-                  <h1 className="header mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="header-inner block">The Faces Fund</span>
+                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                    <span className="block">The Faces Fund</span>
                   </h1>
-                  <div className="sub-header">
-                    <p className="sub-header-inner mt-3 text-base text-white sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  <div>
+                    <p className="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                     The Faces Fund is a collection of 3,000 art pieces generated from a variety of hand-drawn traits built with the goal of community philanthropy.
                     <br />
                     <br />
@@ -163,7 +163,7 @@ const App = () => {
                 </div>
               </div>
               <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative flex justify-items-center items-center">
-                <div id="collage" className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
                   <img src={collage} alt="Token Collage"/>
                 </div>
               </div>
@@ -173,11 +173,11 @@ const App = () => {
 
         <Features />
 
+        <Team />
+
         <Collection />
 
         <Roadmap />
-
-        <Team />
 
         <FAQ />
 

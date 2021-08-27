@@ -27,10 +27,8 @@ const Timeline = () => (
 	<div className="container">
 		{items.map((i, idx) => (
 			<div className="timeline-item text-lg" date-is='' key={idx}>
-				<h1 className="text-white">{i.title}:</h1>
-				<p className="text-white">
-					{i.desc}
-				</p>
+				<h1>{i.title}:</h1>
+				<p>{i.desc}</p>
 			</div>
 		))}
 	</div>

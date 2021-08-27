@@ -1,7 +1,7 @@
 const footerNav = {
   main: [
-    { name: 'Collection', href: '#collection' },
     { name: 'Team', href: '#team' },
+    { name: 'Collection', href: '#collection' },
     { name: 'Roadmap', href: '#roadmap' },
     { name: 'FAQ', href: '#faq' },
   ],

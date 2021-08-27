@@ -4,46 +4,46 @@
 
 @-webkit-keyframes fade-in {
 	0% {
-	opacity:0
+		opacity:0
 	}
 	100% {
-	opacity:1
+		opacity:1
 	}
 }
 
 @keyframes fade-in {
 	0% {
-	opacity: 0
+		opacity: 0
 	}
 	100% {
-	opacity: 1
+		opacity: 1
 	}
 }
 
 @keyframes text-clip {
 	from {
-	clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 	}
 	to {
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
 }
 
 @keyframes outer-left {
 	from {
-	transform: translateX(50%);
+		transform: translateX(50%);
 	}
 	to {
-	transform: none;
+		transform: none;
 	}
 }
 
 @keyframes inner-left {
 	from {
-	transform: translateX(-50%);
+		transform: translateX(-50%);
 	}
 	to {
-	transform: none;
+		transform: none;
 	}
 }
 
@@ -56,7 +56,7 @@
 
 .header {
 	> .cafe-inner {
-	display: inline-block;
+		display: inline-block;
 	}
 }
 
