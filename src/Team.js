@@ -26,7 +26,7 @@ const people = [
     name: 'Andrew',
     role: 'Developer',
     imageUrl: andrewToken,
-	bio: 'Software Engineer at Amazon. Cal-Berkeley CS BS. Developer for The Faces Fund.',
+	bio: 'Software Engineer at Amazon. Cal-Berkeley CS BS.',
 	community: 'Recurring donor to Seattle food banks.',
     charity: 'American Red Cross',
   },
