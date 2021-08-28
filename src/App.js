@@ -8,7 +8,7 @@ import Features from './Features';
 import Footer from './Footer';
 import Roadmap from './Roadmap';
 import Team from './Team';
-import gif from './assets/148-167_40_04.gif';
+import gif from './assets/gif40_16.gif';
 
 import './App.css';
 
