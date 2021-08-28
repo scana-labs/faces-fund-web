@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import Web3 from "web3";
 
-const ADDRESS = "";
-const ABI = "";
+import TheFacesFund from './abi/TheFacesFund.json'
 
 const Mint = () => {
 	// Wallet state
@@ -33,7 +32,7 @@ const Mint = () => {
 				const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
 				const network = await window.web3.eth.net.getNetworkType();
 
-				if (network !== "rinkeby") {
+				if (network !== "private") {
 					console.log(network);
 					alert("You are on " + network + " network. Change network to mainnet or you won't be able to do anything here");
 				}
@@ -41,7 +40,7 @@ const Mint = () => {
 				let wallet = accounts[0];
 				setWalletAddress(wallet);
 				setSignedIn(true);
-				// getContractData(wallet);
+				getContractData(wallet);
 			}
 			catch (e) {
 				// TODO: Handle error. Likely the user rejected the login
@@ -59,7 +58,11 @@ const Mint = () => {
 	// Do we need a sign out function?
 
 	const getContractData = async wallet => {
-		const facesFundContract = new window.web3.eth.Contract(ABI, ADDRESS);
+		const networkId = await window.web3.eth.net.getId();
+
+		const abi = TheFacesFund.abi;
+		const address = TheFacesFund.networks[networkId].address;
+		const facesFundContract = new window.web3.eth.Contract(abi, address);
 		setFacesFundContract(facesFundContract);
 
 		const salebool = await facesFundContract.methods.saleIsStarted().call();
@@ -72,8 +75,9 @@ const Mint = () => {
 		setTokenPrice(facePrice);
 	}
 
-	const mint = async () => {
-		// TODO
+	const mint = async (numTokens) => {
+		this.state.facesFundContract.methods.mint(numTokens)
+			.send({ from: this.state.walletAddress, value: numTokens * this.state.tokenPrice})
 	}
 
 	return (
