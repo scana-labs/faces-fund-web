@@ -6,6 +6,7 @@ import Collection from './Collection';
 import FAQs from './FAQs';
 import Features from './Features';
 import Footer from './Footer';
+import Mint from './Mint';
 import Roadmap from './Roadmap';
 import Team from './Team';
 import gif from './assets/148-167_40_04.gif';
@@ -88,6 +89,9 @@ const App = () => {
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
                 ))}
+              </div>
+              <div className="mint-btn-container">
+                <Mint />
               </div>
             </div>
           </nav>
