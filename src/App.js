@@ -60,7 +60,12 @@ const App = () => {
                             <br />
                             <br />
                             Token holders vote on how the charity fund is donated each week. Those who participate are eligible to win ETH.
+                            <br />
+                            <br />
                             </p>
+                            <div className="text-2xl">
+                            Coming Soon: International Day of Charity September 05, 2021
+                            </div>
                         </div>
                         </div>
                     </div>
