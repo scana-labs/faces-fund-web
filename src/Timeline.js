@@ -4,6 +4,8 @@ const items = [
 	{
 		title: 'Minting Closes',
 		desc: 'On either sell out or 10 days after initial launch, we close minting forever for TFF.',
+		subDescTitles: ['Exclusive Discord is created for token holders'],
+		subDescs: ['Upon Verification, our members will get the alpha before anyone else.'],
 	},
 	{
 		title: 'Weekly Donations Begin',
@@ -12,10 +14,8 @@ const items = [
 	{
 		title: 'Featured Charities and Submitters',
 		desc: 'New sections on our website and Twitter that feature charities that we donate to and the wallets who submitted them.',
-	},
-	{
-		title: 'Community Partnerships',
-		desc: 'Partnerships with other artists and NFT projects to add money and potentially other tokens to the charity and community fund respectively.',
+		subDescTitles: ['Rarity Platform is launched', 'Community Events and Giveaways'],
+		subDescs: ['Token holders will have access to premium features. Non-token holders can pay a subscription fee to access.', 'We’ll keep this under wraps for now… :)'],
 	},
 	{
 		title: 'Future projects',
@@ -26,9 +26,17 @@ const items = [
 const Timeline = () => (
 	<div className="container">
 		{items.map((i, idx) => (
-			<div className="timeline-item text-lg" date-is='' key={idx}>
-				<h1>{i.title}</h1>
-				<p>{i.desc}</p>
+			<div className="timeline-item" date-is='' key={idx}>
+				<p className="text-3xl">{i.title}</p>
+				<p className="text-lg">{i.desc}</p>
+				{i.subDescTitles && <br />}
+				{i.subDescTitles && i.subDescTitles.map((title, subDescIdx) => (
+					<div key={subDescIdx}>
+						<p className="text-xl">{title}</p>
+						<p className="text-md">{i.subDescs[subDescIdx]}</p>
+						<br />
+					</div>
+				))}
 			</div>
 		))}
 	</div>

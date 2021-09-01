@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import mixpanel from 'mixpanel-browser';
 
 import Collection from './Collection';
 import FAQs from './FAQs';
@@ -78,12 +79,20 @@ const App = () => {
                     key={item.name}
                     href={item.href}
                     className="text-base font-medium hover:text-gray-300"
+                    onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
                   >
                     {item.name}
                   </a>
                 ))}
                 {navigation.social.map((item) => (
-                  <a key={item.name} href={item.href} className="hover:text-gray-300" target="_blank" rel="noreferrer">
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="hover:text-gray-300"
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
+                  >
                     <span className="sr-only">{item.name}</span>
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </a>
@@ -152,19 +161,23 @@ const App = () => {
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">The Faces Fund</span>
                   </h1>
-                  <div>
-                    <p className="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    The Faces Fund is a collection of 3,000 art pieces generated from a variety of hand-drawn traits built with the goal of community philanthropy.
+                  <div className="text-left mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    <p>The Faces Fund is a collection of 3,000 tokens algorithmically generated from a variety of hand-drawn traits built upon three pillars: philanthropy, community and utility.</p>
                     <br />
                     <br />
-                    Token holders vote on how the charity fund is donated each week. Those who participate are eligible to win ETH.
-                    </p>
+                    <p className="font-semibold">Philanthropy:</p> Token holders vote on how the charity fund is donated each week. Those who participate are eligible to win ETH.
+                    <br />
+                    <br />
+                    <p className="font-semibold">Community:</p> Token holders have access to a members only discord and real world community events.
+                    <br />
+                    <br />
+                    <p className="font-semibold">Utility:</p> Token holders have unlimited access for premium NFT tools.
                   </div>
                 </div>
               </div>
-              <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative flex justify-items-center items-center">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-                  <img id="token-gif" src={gif} alt="Token GIF"/>
+              <div className="mt-12 mb-16 sm:mb-48 lg:m-0 lg:relative flex justify-items-center items-center">
+                <div className="w-full aspect-w-3 aspect-h-3 lg:aspect-none">
+                  <img id="token-gif" className="w-full h-full object-center object-cover lg:w-full lg:h-full" src={gif} alt="Token GIF"/>
                 </div>
               </div>
             </div>
