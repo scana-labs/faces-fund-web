@@ -29,6 +29,11 @@ const faqs = [
 		tag: 'replenish community fund',
 	},
 	{
+		question: 'What tools are you building in the NFT space?',
+		answer: 'We are starting with a rarity platform with premiun features that token holders will have free access to. Find us on Discord to find out more about future projects!',
+		tag: 'what tools',
+	},
+	{
 		question: 'Any other royalties?',
 		answer: 'The creators will receive 3% of all secondary sales. This helps with managing and growing The Faces Fund as a philanthropic brand in the NFT space, which ultimately will provide value to token holders and more charities around the world.',
 		tag: 'royalties',
