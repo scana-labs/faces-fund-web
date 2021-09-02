@@ -1,7 +1,7 @@
 import Timeline from './Timeline';
 
 const Roadmap = () => (
-	<div id="roadmap" className="overflow-hidden">
+	<div id="roadmap" className="overflow-hidden bg-white pt-36 pb-36">
 		<div className="relative max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
 
 		<div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
