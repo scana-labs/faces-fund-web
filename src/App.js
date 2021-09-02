@@ -7,6 +7,7 @@ import Collection from './Collection';
 import FAQs from './FAQs';
 import Features from './Features';
 import Footer from './Footer';
+import Pillars from './Pillars';
 import Roadmap from './Roadmap';
 import Team from './Team';
 import gif from './assets/gif40_16.gif';
@@ -161,17 +162,9 @@ const App = () => {
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">The Faces Fund</span>
                   </h1>
-                  <div className="text-left mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    <p>The Faces Fund is a collection of 3,000 tokens algorithmically generated from a variety of hand-drawn traits built upon three pillars: philanthropy, community and utility.</p>
-                    <br />
-                    <br />
-                    <p className="font-semibold">Philanthropy:</p> Token holders vote on how the charity fund is donated each week. Those who participate are eligible to win ETH.
-                    <br />
-                    <br />
-                    <p className="font-semibold">Community:</p> Token holders have access to a members only discord and real world community events.
-                    <br />
-                    <br />
-                    <p className="font-semibold">Utility:</p> Token holders have unlimited access for premium NFT tools.
+                  <div className="text-left mt-10 text-xl sm:mt-5 sm:text-xl">
+                    <p className="mt-10">The Faces Fund is a collection of 3,000 tokens algorithmically generated from a variety of hand-drawn traits built upon three pillars: philanthropy, community and utility.</p>
+                    <p className="mt-10 font-bold">Dropping International Charity Day, 7:00PM EST September 5, 2021</p>
                   </div>
                 </div>
               </div>
@@ -184,9 +177,11 @@ const App = () => {
           </div>
         </div>
 
-        <Features />
+        <Pillars />
 
         <Team />
+
+        <Features />
 
         <Collection />
 

@@ -5,7 +5,7 @@ import mixpanel from 'mixpanel-browser';
 const faqs = [
 	{
 		question: 'How are the initial sales allocated?',
-		answer: '51% of initial sales are added to the Charity Fund. 34% of initial sales are added to the Community Fund. 15% is used for marketing, giveaways and infrastructure for the project.',
+		answer: '34% of initial sales are added to the Charity Fund. 33% of initial sales are added to the Community Fund. 33% is used for marketing, giveaways and building premium NFT tools.',
 		tag: 'initial sale allocation',
 	},
 	{
@@ -35,7 +35,7 @@ const faqs = [
 	},
 	{
 		question: 'How many tokens and at what cost?',
-		answer: 'There will be 3,000 total tokens available. Mint price is at 0.05ETH each. From the 3,000 total tokens, we have pre allocated 128 random tokens to the community fund for giveaways. The 4 creators have each chosen their desired face token. All tokens except for the creator tokens are randomly generated.',
+		answer: 'There will be 3,000 total tokens available. Mint price is at 0.05ETH each. From the 3,000 total tokens, we have pre allocated 256 random tokens to the community fund for giveaways. The 4 creators have each chosen their desired face token. All tokens except for the creator tokens are randomly generated.',
 		tag: 'tokens and cost',
 	},
 ];
@@ -45,7 +45,7 @@ function classNames(...classes) {
 }
 
 const FAQ = () => (
-	<div id="faq" className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+	<div id="faq" className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 pt-36 pb-36">
 		<div className="lg:grid lg:grid-cols-3 lg:gap-8">
 			<div>
 				<h1 className="text-3xl font-extrabold mb-4">Frequently asked questions</h1>

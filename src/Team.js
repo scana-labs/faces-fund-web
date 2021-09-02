@@ -43,11 +43,11 @@ const people = [
 ];
 
 const Team = () => (
-	<div id="team">
+	<div id="team" className="pt-36 pb-36">
 		<div className="mx-auto py-8 px-4 max-w-7xl sm:px-6 lg:px-8">
 			<h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4">Our Team</h1>
 			<div className="space-y-6">
-				<p className="text-xl">
+				<p className="text-xl pb-10">
 					We are a group of close friends creating high-utility NFT projects in order to make a lasting impact in the communities around us.
 				</p>
 
@@ -74,9 +74,6 @@ const Team = () => (
 									</div>
 									<div className="text-lg">
 										<p>{person.bio}</p>
-									</div>
-									<div className="text-lg">
-										<p>Community Involvement: {person.community}</p>
 									</div>
 									<div className="text-lg">
 										<p>Charity of choice: {person.charity}</p>

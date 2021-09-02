@@ -1,9 +1,9 @@
-import { CakeIcon, GiftIcon, GlobeIcon, SparklesIcon } from '@heroicons/react/outline';
+import { CakeIcon, GiftIcon, CalendarIcon, SparklesIcon } from '@heroicons/react/outline';
 
 import './Features.css';
 
 const Features = () => (
-	<div className="py-12">
+	<div className="py-12 pt-36 pb-36 bg-white">
 		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div className="lg:text-center">
 			<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">How does it all work?</p>
@@ -14,7 +14,7 @@ const Features = () => (
 				<div key="Weekly Donation Cycles" className="relative">
 					<dt>
 						<div className="absolute flex items-center justify-center h-12 w-12 rounded-md feature-icon">
-						<GlobeIcon className="h-6 w-6" aria-hidden="true" />
+						<CalendarIcon className="h-6 w-6" aria-hidden="true" />
 						</div>
 						<p className="ml-16 text-xl leading-6 font-medium">Weekly Donation Cycles</p>
 					</dt>
@@ -34,7 +34,7 @@ const Features = () => (
 						<div className="absolute flex items-center justify-center h-12 w-12 rounded-md feature-icon">
 						<CakeIcon className="h-6 w-6" aria-hidden="true" />
 						</div>
-						<p className="ml-16 text-xl leading-6 font-medium">Lifetime NFT Tools Pass</p>
+						<p className="ml-16 text-xl leading-6 font-medium">Premium NFT Tools Pass</p>
 					</dt>
 					<dd className="mt-2 ml-16 text-lg text-base">The creators continually build invaluable NFT tools that the community gets access to for free.</dd>
 				</div>
