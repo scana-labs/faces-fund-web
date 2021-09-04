@@ -1,7 +1,7 @@
 {
     "name": "The Faces Fund",
     "description": "The Faces Fund test contract",
-    "image": "https://thefacesfund.com/image/11111.jpg",
+    "image": "https://thefacesfund.com/image/TheFacesFund.png",
     "external_link": "https://thefacesfund.com/",
     "seller_fee_basis_points": 500,
     "fee_recipient": "0x597FAfa3843d613134dd1D1459bceD5d1C3ffC9c"
