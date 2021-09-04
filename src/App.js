@@ -57,9 +57,8 @@ const App = () => {
                               <span className="block">The Faces Fund</span>
                           </h1>
                           <div className="text-left mt-10 text-xl sm:mt-5 sm:text-xl">
-                            <p className="mt-10">The Faces Fund is a collection of 3,000 tokens algorithmically generated from a variety of hand-drawn traits built upon three pillars: philanthropy, community and utility.</p>
                             <Link to="/mint">
-                              <p className="mt-10 font-bold">Dropping International Charity Day, 7:00PM EST September 5, 2021</p>
+                            <p className="mt-10">The Faces Fund is a collection of 3,000 tokens algorithmically generated from a variety of hand-drawn traits built upon three pillars: philanthropy, community and utility.</p>
                             </Link>
                           </div>
                         </div>
