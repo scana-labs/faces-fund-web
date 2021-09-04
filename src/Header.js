@@ -67,7 +67,7 @@ const Header = () => (
 							<Link
 								key={item.name}
 								to={item.href}
-								className="text-base font-medium hover:text-gray-300"
+								className="text-base font-medium hover:text-indigo-600"
 								onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
 							>
 								{item.name}
@@ -77,7 +77,7 @@ const Header = () => (
 							<a
 								key={item.name}
 								href={item.href}
-								className="hover:text-gray-300"
+								className="hover:text-indigo-600"
 								target="_blank"
 								rel="noreferrer"
 								onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
