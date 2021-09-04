@@ -3,6 +3,7 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from "web3";
 import { ExclamationCircleIcon, XIcon } from '@heroicons/react/solid';
 import { Transition } from '@headlessui/react';
+import mixpanel from 'mixpanel-browser';
 
 import gif from './assets/gif40_16.gif';
 import TheFacesFund from './abi/TheFacesFund.json';
@@ -13,6 +14,8 @@ const defaultErrorMessage = 'If this issue persists please reach out to the team
 const TOTAL_TOKEN_SUPPLY = 3000;
 
 const Mint = () => {
+	mixpanel.track('Mint initial render');
+
 	// Wallet state
 	const [signedIn, setSignedIn] = useState(false);
 	const [walletAddress, setWalletAddress] = useState(null);
@@ -35,9 +38,11 @@ const Mint = () => {
 		setErrorMessage(msg);
 		setShowNote(showNote);
 		setIsLoading(false);
+		mixpanel.track('Error popup', { msg });
 	}
 
 	const connectWallet = async () => {
+		mixpanel.track('Connect Wallet', { step: 'initial-click' });
 		let currentAccount = null;
 		setIsLoading(true);
 
@@ -56,7 +61,8 @@ const Mint = () => {
 			// If the provider returned by detectEthereumProvider is not the same as
 			// window.ethereum, something is overwriting it, perhaps another wallet.
 			if (provider !== window.ethereum) {
-			  showErrorMessage('Do you have multiple wallets installed? Please try using only one wallet, refresh the page, and try again', true);
+				mixpanel.track('Connect Wallet', { step: 'other-provider' });
+			 	showErrorMessage('Do you have multiple wallets installed? Please try using only one wallet, refresh the page, and try again', true);
 			}
 			else {
 				// Handle chain (network) and chainChanged (per EIP-1193). Reload page
@@ -80,17 +86,20 @@ const Mint = () => {
 
 						// Set to desired network i.e. "rinkeby" for testing
 						if (network !== "rinkeby") {
-							console.log(network);
+							mixpanel.track('Connect Wallet', { step: 'invalid-network', network, });
 							alert("You are on the " + network + " network. Change network to mainnet or you won't be able to do anything here");
 						}
 						else if (currentAccount) {
+							mixpanel.track('Connect Wallet', { step: 'accounts-requested', accounts, network, });
 							setWalletAddress(currentAccount);
 							await getContractData(currentAccount);
 							setIsLoading(false);
 							setSignedIn(true);
+							mixpanel.track('Connect Wallet', { step: 'sign-in-success' });
 						}
 					}
 					catch (e) {
+						mixpanel.track('Connect Wallet', { step: 'web3-error' });
 						let errMessage = 'Please refresh the page and try again. If the issue persists please reach out to our team on Discord and we will get back to you ASAP!';
 						if (e.code === 4001) {
 							// User rejected request
@@ -114,6 +123,7 @@ const Mint = () => {
 		const provider = await detectEthereumProvider();
 
 		if (provider) {
+			mixpanel.track('Connect Wallet', { step: 'provider-detected' });
 			startApp(provider);
 		} else {
 			showErrorMessage('No Ethereum provider found! It looks like you may not have MetaMask installed. Please see the instructions below to connect your wallet.', true);
@@ -137,30 +147,36 @@ const Mint = () => {
 
 		const facePrice = await facesFundContract.methods.getPrice().call();
 		setTokenPrice(facePrice);
+
+		mixpanel.track('Connect Wallet', { step: 'contract-data-success', saleStarted: salebool, totalSupply, facePrice, });
 	}
 
 	const mint = async (numTokens) => {
-		// TODO: Remove console.logs
+		mixpanel.track('Mint token', { step: 'initial-click' });
 		try {
 			if (facesFundContract && totalSupply < TOTAL_TOKEN_SUPPLY) {
-				const price = Number(tokenPrice)  * numTokens;
+				mixpanel.track('Mint token', { step: 'valid-contract-valid-supply' });
+
+				const price = Number(tokenPrice) * numTokens;
 				const gasAmount = await facesFundContract.methods.mint(numTokens).estimateGas({ from: walletAddress, value: price });
 
-				console.log("Estimated gas:", gasAmount);
+				mixpanel.track('Mint token', { step: 'estimated-gas', gas: gasAmount, price, });
 			
 				facesFundContract.methods
 					.mint(numTokens)
 					.send({ from: walletAddress, value: price, gas: String(gasAmount) })
 					.on('transactionHash', hash => {
-						console.log("Transaction Hash:", hash);
+						mixpanel.track('Mint token', { step: 'mint-success', gas: gasAmount, price, transactionHash: hash, numTokens, totalSupply, });
 						setTotalSupply(totalSupply + numTokens);
 					});
 			} else {
+				mixpanel.track('Mint token', { step: 'invalid-contract-invalid-supply' });
 				// This should never happen. The button should be disabled if the wallet is not connected
 				showErrorMessage('It looks like there was a connection issue. Please refresh the page and try again. If this issue persists please reach out to the team on Discord and we will get back to you ASAP!', true);
 			}
 		}
 		catch (e) {
+			mixpanel.track('Mint token', { step: 'error' });
 			showErrorMessage('It looks like there was an error minting! Please make sure you have sufficient funds in your wallet. If this issue persists please reach out to the team on Discord and we will get back to you ASAP!', true);
 			console.error(e);
 		}

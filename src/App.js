@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import {
+  Link,
   Switch,
   Route,
   useLocation,
@@ -9,6 +10,7 @@ import Collection from './Collection';
 import FAQs from './FAQs';
 import Features from './Features';
 import Footer from './Footer';
+import Funds from './Funds';
 import Header from './Header';
 import Mint from './Mint';
 import Roadmap from './Roadmap';
@@ -51,22 +53,15 @@ const App = () => {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                     <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
                         <div className="lg:py-24">
-                        <h1 className="mt-4 text-4xl tracking-tight font-extrabold sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                            <span className="block">The Faces Fund</span>
-                        </h1>
-                        <div>
-                            <p className="mt-3 text-base sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                            The Faces Fund is a collection of 3,000 art pieces generated from a variety of hand-drawn traits built with the goal of community philanthropy.
-                            <br />
-                            <br />
-                            Token holders vote on how the charity fund is donated each week. Those who participate are eligible to win ETH.
-                            <br />
-                            <br />
-                            </p>
-                            <div className="text-2xl">
-                            Coming Soon: International Day of Charity September 05, 2021
-                            </div>
-                        </div>
+                          <h1 className="mt-4 text-4xl tracking-tight font-extrabold sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                              <span className="block">The Faces Fund</span>
+                          </h1>
+                          <div className="text-left mt-10 text-xl sm:mt-5 sm:text-xl">
+                            <p className="mt-10">The Faces Fund is a collection of 3,000 tokens algorithmically generated from a variety of hand-drawn traits built upon three pillars: philanthropy, community and utility.</p>
+                            <Link to="/mint">
+                              <p className="mt-10 font-bold">Dropping International Charity Day, 7:00PM EST September 5, 2021</p>
+                            </Link>
+                          </div>
                         </div>
                     </div>
                     <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative flex justify-items-center items-center">
@@ -78,9 +73,11 @@ const App = () => {
               </div>
             </div>
 
-            <Features />
+            <Funds />
 
             <Team />
+
+            <Features />
 
             <Collection />
 
