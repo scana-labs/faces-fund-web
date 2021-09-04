@@ -44,49 +44,41 @@ const Header = () => (
 			className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
 			aria-label="Global"
 			>
-			<div className="flex items-center flex-1">
-				<div className="flex items-center justify-between w-full md:w-auto">
-				<a href="#icon">
-					<span className="sr-only">Workflow</span>
-					<img
-					className="h-8 w-auto sm:h-10"
-					src="/logo512.png"
-					alt=""
-					/>
-				</a>
-				<div className="-mr-2 flex items-center md:hidden">
-					<Popover.Button className="mobile-menu rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
-					<span className="sr-only">Open main menu</span>
-					<MenuIcon className="h-6 w-6" aria-hidden="true" />
-					</Popover.Button>
-				</div>
-				</div>
-				<div className="hidden space-x-8 md:flex md:ml-10 items-center">
-					<Link to="/mint">
-						<button
-							type="button"
-							className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-						>
-							Mint	
-						</button>
-					</Link>
-					{navigation.main.map((item) => (
-						<Link
-						key={item.name}
-						to={item.href}
-						className="text-base font-medium hover:text-gray-300"
-						>
-							{item.name}
+				<div className="flex items-center flex-1">
+					<div className="flex items-center justify-between w-full md:w-auto">
+						<Link to="/">
+							<span className="sr-only">Workflow</span>
+							<img
+							className="h-8 w-auto sm:h-10"
+							src="/logo512.png"
+							alt=""
+							/>
 						</Link>
-					))}
-					{navigation.social.map((item) => (
-						<a key={item.name} href={item.href} className="hover:text-gray-300" target="_blank" rel="noreferrer">
-							<span className="sr-only">{item.name}</span>
-							<item.icon className="h-6 w-6" aria-hidden="true" />
-						</a>
-					))}
+						<div className="-mr-2 flex items-center md:hidden">
+							<Popover.Button className="mobile-menu rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+							<span className="sr-only">Open main menu</span>
+							<MenuIcon className="h-6 w-6" aria-hidden="true" />
+							</Popover.Button>
+						</div>
+					</div>
+					<div className="hidden space-x-8 md:flex md:ml-10 items-center">
+						{navigation.main.map((item) => (
+							<Link
+								key={item.name}
+								to={item.href}
+								className="text-base font-medium hover:text-gray-300"
+							>
+								{item.name}
+							</Link>
+						))}
+						{navigation.social.map((item) => (
+							<a key={item.name} href={item.href} className="hover:text-gray-300" target="_blank" rel="noreferrer">
+								<span className="sr-only">{item.name}</span>
+								<item.icon className="h-6 w-6" aria-hidden="true" />
+							</a>
+						))}
+					</div>
 				</div>
-			</div>
 			</nav>
 		</div>
 
@@ -102,46 +94,40 @@ const Header = () => (
 			<Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden z-50">
 			<div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
 				<div className="px-5 pt-4 flex items-center justify-between">
-				<div>
-					<img
-					className="h-8 w-auto"
-					src="/logo512.png"
-					alt=""
-					/>
-				</div>
-				<div className="-mr-2">
-					<Popover.Button className="mobile-menu rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
-					<span className="sr-only">Close menu</span>
-					<XIcon className="h-6 w-6" aria-hidden="true" />
-					</Popover.Button>
-				</div>
+					<div>
+						<Link to="/">
+							<img
+								className="h-8 w-auto"
+								src="/logo512.png"
+								alt=""
+							/>
+						</Link>
+					</div>
+					<div className="-mr-2">
+						<Popover.Button className="mobile-menu rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+						<span className="sr-only">Close menu</span>
+						<XIcon className="h-6 w-6" aria-hidden="true" />
+						</Popover.Button>
+					</div>
 				</div>
 				<div className="pt-5 pb-6">
-				<div className="px-2 space-y-1">
-					<Link to="/mint">
-						<button
-							type="button"
-							className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+					<div className="px-2 space-y-1">
+						{navigation.main.map((item) => (
+						<Link
+							key={item.name}
+							to={item.href}
+							className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
 						>
-							Mint	
-						</button>
-					</Link>
-					{navigation.main.map((item) => (
-					<Link
-						key={item.name}
-						to={item.href}
-						className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
-					>
-						{item.name}
-					</Link>
-					))}
-					{navigation.social.map((item) => (
-					<a key={item.name} href={item.href} className="block px-3 py-2 text-black hover:text-gray-500" target="_blank" rel="noreferrer">
-						<span className="sr-only">{item.name}</span>
-						<item.icon className="h-6 w-6" aria-hidden="true" />
-					</a>
-					))}
-				</div>
+							{item.name}
+						</Link>
+						))}
+						{navigation.social.map((item) => (
+						<a key={item.name} href={item.href} className="block px-3 py-2 text-black hover:text-gray-500" target="_blank" rel="noreferrer">
+							<span className="sr-only">{item.name}</span>
+							<item.icon className="h-6 w-6" aria-hidden="true" />
+						</a>
+						))}
+					</div>
 				</div>
 			</div>
 			</Popover.Panel>
