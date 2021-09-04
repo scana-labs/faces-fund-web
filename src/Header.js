@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import mixpanel from 'mixpanel-browser';
 
 const navigation = {
   main: [
@@ -46,7 +47,7 @@ const Header = () => (
 			>
 				<div className="flex items-center flex-1">
 					<div className="flex items-center justify-between w-full md:w-auto">
-						<Link to="/">
+						<Link to="/" onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: 'home' }))}>
 							<span className="sr-only">Workflow</span>
 							<img
 							className="h-8 w-auto sm:h-10"
@@ -67,12 +68,20 @@ const Header = () => (
 								key={item.name}
 								to={item.href}
 								className="text-base font-medium hover:text-gray-300"
+								onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
 							>
 								{item.name}
 							</Link>
 						))}
 						{navigation.social.map((item) => (
-							<a key={item.name} href={item.href} className="hover:text-gray-300" target="_blank" rel="noreferrer">
+							<a
+								key={item.name}
+								href={item.href}
+								className="hover:text-gray-300"
+								target="_blank"
+								rel="noreferrer"
+								onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
+							>
 								<span className="sr-only">{item.name}</span>
 								<item.icon className="h-6 w-6" aria-hidden="true" />
 							</a>
@@ -95,7 +104,7 @@ const Header = () => (
 			<div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
 				<div className="px-5 pt-4 flex items-center justify-between">
 					<div>
-						<Link to="/">
+						<Link to="/" onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: 'home' }))}>
 							<img
 								className="h-8 w-auto"
 								src="/logo512.png"
@@ -117,12 +126,20 @@ const Header = () => (
 							key={item.name}
 							to={item.href}
 							className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+							onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
 						>
 							{item.name}
 						</Link>
 						))}
 						{navigation.social.map((item) => (
-						<a key={item.name} href={item.href} className="block px-3 py-2 text-black hover:text-gray-500" target="_blank" rel="noreferrer">
+						<a
+							key={item.name}
+							href={item.href}
+							className="block px-3 py-2 text-black hover:text-gray-500"
+							target="_blank"
+							rel="noreferrer"
+							onClick={() => (mixpanel.track('Navigation', { src: 'header', dest: item.name }))}
+						>
 							<span className="sr-only">{item.name}</span>
 							<item.icon className="h-6 w-6" aria-hidden="true" />
 						</a>

@@ -4,7 +4,7 @@ import Web3 from "web3";
 import { ExclamationCircleIcon, XIcon } from '@heroicons/react/solid';
 import { Transition } from '@headlessui/react';
 
-import gif from './assets/148-167_40_04.gif';
+import gif from './assets/gif40_16.gif';
 import TheFacesFund from './abi/TheFacesFund.json';
 
 const defaultErrorTitle = 'Looks like something went wrong!';
@@ -28,7 +28,7 @@ const Mint = () => {
 
 	// Current contract data
 	const [totalSupply, setTotalSupply] = useState(0);
-	const [saleStarted, setSaleStarted] = useState(true);
+	const [saleStarted, setSaleStarted] = useState(false);
 	const [tokenPrice, setTokenPrice] = useState(0);
 
 	const showErrorMessage = (msg = '', showNote = false) => {

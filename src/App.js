@@ -42,6 +42,9 @@ const App = () => {
       <main id="main">
         <Header />
         <Switch>
+          <Route path="/mint">
+            <Mint />
+          </Route>
           <Route path="/">
             <div className="flex items-center pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden mb-20 md:h-screen">
               <div className="mx-auto max-w-7xl lg:px-8">
