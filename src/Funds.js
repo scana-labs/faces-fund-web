@@ -5,30 +5,30 @@ import './Pillars.css';
 const features = [
   {
 	name: 'Philanthropy',
-	desc: 'Token holders vote on where to donate each week. Participants are eligible to win ETH.',
-	donate: '34% of sales goes to the charity fund.',
+	desc: 'Focused on giving back to the community, token holders vote on a set of charities to donate to each week with the fund.',
+	donate: '34% of sales goes to the philanthropy fund.',
     icon: GlobeIcon,
   },
   {
 	name: 'Community',
-	desc: 'Token holders have access to a members only discord and real world community events.',
+	desc: 'Focused on our token holders, holders have access to exclusive events and are eligible to win ETH each week.',
 	donate: '33% of sales goes to the community fund.',
     icon: UserGroupIcon,
   },
   {
 	name: 'Utility',
-	desc: 'Token holders have unlimited access to premium NFT tools.',
-	donate: '33% of sales goes to building community tools.',
+	desc: 'Focused on building tools for the NFT community, token holders have unlimited access to premium NFT tools.',
+	donate: '33% of sales goes to the utility fund.',
     icon: LightningBoltIcon,
   },
 ]
 
-const Pillars = () => {
+const Funds = () => {
   return (
     <div className="py-12 pt-36 pb-36 bg-white">
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
 		<div className="lg:text-center mb-10">
-			<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">Our Pillars</p>
+			<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">Our Funds</p>
 		</div>
         <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
           {features.map((feature) => (
@@ -50,4 +50,4 @@ const Pillars = () => {
   )
 };
 
-export default Pillars;
+export default Funds;

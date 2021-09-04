@@ -38,14 +38,14 @@ const Features = () => (
 					</dt>
 					<dd className="mt-2 ml-16 text-lg text-base">The creators continually build invaluable NFT tools that the community gets access to for free.</dd>
 				</div>
-				<div key="Airdrops for Future NFT Projects" className="relative">
+				<div key="Airdrops" className="relative">
 					<dt>
 						<div className="absolute flex items-center justify-center h-12 w-12 rounded-md feature-icon">
 						<GiftIcon className="h-6 w-6" aria-hidden="true" />
 						</div>
-						<p className="ml-16 text-xl leading-6 font-medium">Airdrops for Future NFT Projects</p>
+						<p className="ml-16 text-xl leading-6 font-medium">Airdrops</p>
 					</dt>
-					<dd className="mt-2 ml-16 text-lg text-base">We are working with artists to create more utility-first NFT projects and our community will be able to get access first.</dd>
+					<dd className="mt-2 ml-16 text-lg text-base">The earlier a token is minted, the rarer the drop holders have access to. We are also working with artists to create more utility-first NFT projects which our community will be able to get access first.</dd>
 				</div>
 			</dl>
 		</div>

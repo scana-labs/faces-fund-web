@@ -2,8 +2,8 @@ import './Timeline.css';
 
 const items = [
 	{
-		title: 'Minting Closes',
-		desc: 'On either sell out or 10 days after initial launch, we close minting forever for TFF.',
+		title: 'Minting Opens',
+		desc: 'Tokens are released in batches meaning only a set number of tokens can be minted each day. For a given day, if the maximum number of tokens are not minted then the remaining tokens are burned. Once all tokens have been minted or burned, minting closes.',
 	},
 	{
 		title: 'Exclusive Discord is created for token holders',

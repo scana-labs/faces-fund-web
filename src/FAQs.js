@@ -4,6 +4,10 @@ import mixpanel from 'mixpanel-browser';
 
 const faqs = [
 	{
+		question: 'How does the slow rollout work?',
+		answer: 'We will predetermine a set number of tokens to release each day to be minted. This means that only that number of tokens can be minted for the next 24hrs. Once 24hrs pass, a new set of tokens will be released and all the tokens in the previous set that weren\'t minted will be burned. This process of releasing and burning will continue until all 3,000 tokens have been accounted for.'
+	},
+	{
 		question: 'How are the initial sales allocated?',
 		answer: '34% of initial sales are added to the Charity Fund. 33% of initial sales are added to the Community Fund. 33% is used for marketing, giveaways and building premium NFT tools.',
 		tag: 'initial sale allocation',
