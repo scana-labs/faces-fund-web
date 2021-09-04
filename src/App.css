@@ -9,6 +9,10 @@
   color: #333333;
 }
 
+.mint-btn-container {
+  margin-left: auto;
+}
+
 .mobile-menu {
   background-color: #F9B460;
   color: white;
