@@ -28,7 +28,7 @@ const Mint = () => {
 
 	// Current contract data
 	const [totalSupply, setTotalSupply] = useState(0);
-	const [saleStarted, setSaleStarted] = useState(false);
+	const [saleStarted, setSaleStarted] = useState(true);
 	const [tokenPrice, setTokenPrice] = useState(0);
 
 	const showErrorMessage = (msg = '', showNote = false) => {
@@ -174,9 +174,6 @@ const Mint = () => {
 			>
 				Mint
 			</button>
-			<p>
-				Mint {numTokensToPurchase} Faces for {(tokenPrice * numTokensToPurchase) / (10 ** 18)} ETH + GAS
-			</p>
 		</>
 	) : (
 		<button
@@ -190,7 +187,7 @@ const Mint = () => {
 		<div className="min-h-screen">
 			<div className="relative overflow-hidden">
 			<main>
-				<div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+				<div className="mt-10 mb-28 sm:mt-16 sm:mb-16 lg:pt-8 lg:pb-14 lg:overflow-hidden lg:mb-0">
 					<div className="mx-auto max-w-7xl lg:px-8">
 						<div className="lg:grid lg:grid-cols-2 lg:gap-8">
 							<div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
@@ -252,94 +249,94 @@ const Mint = () => {
 								</div>
 							</div>
 							<div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative flex justify-items-center items-center">
-								<div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-									<img id="token-gif" src={gif} alt="Token GIF"/>
+								<div className="w-full aspect-w-3 aspect-h-3 lg:aspect-none flex justify-items-center items-center">
+									<img id="token-gif" className="p-5 md:p-0" src={gif} alt="Token GIF"/>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				</main>
-			</div>
-			<div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-				<div className="max-w-max lg:max-w-7xl mx-auto">
-					<div className="relative z-10 mb-8 md:mb-2 md:px-6">
-						<div className="text-base max-w-prose lg:max-w-none">
-							<h2 className="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
-							<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-								How does this work?
-							</p>
+				<div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+					<div className="max-w-max lg:max-w-7xl mx-auto">
+						<div className="relative z-10 mb-8 md:mb-2 md:px-6">
+							<div className="text-base max-w-prose lg:max-w-none">
+								<h2 className="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
+								<p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+									How does this work?
+								</p>
+							</div>
 						</div>
-					</div>
-					<div className="relative">
-						<svg
-							className="hidden md:block absolute top-0 right-0 -mt-20 -mr-20"
-							width={404}
-							height={384}
-							fill="none"
-							viewBox="0 0 404 384"
-							aria-hidden="true"
-						>
-							<defs>
-							<pattern
-								id="95e8f2de-6d30-4b7e-8159-f791729db21b"
-								x={0}
-								y={0}
-								width={20}
-								height={20}
-								patternUnits="userSpaceOnUse"
+						<div className="relative">
+							<svg
+								className="hidden md:block absolute top-0 right-0 -mt-20 -mr-20"
+								width={404}
+								height={384}
+								fill="none"
+								viewBox="0 0 404 384"
+								aria-hidden="true"
 							>
-								<rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-							</pattern>
-							</defs>
-							<rect width={404} height={384} fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)" />
-						</svg>
-						<svg
-							className="hidden md:block absolute bottom-0 left-0 -mb-20 -ml-20"
-							width={404}
-							height={384}
-							fill="none"
-							viewBox="0 0 404 384"
-							aria-hidden="true"
-						>
-							<defs>
-							<pattern
-								id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
-								x={0}
-								y={0}
-								width={20}
-								height={20}
-								patternUnits="userSpaceOnUse"
+								<defs>
+								<pattern
+									id="95e8f2de-6d30-4b7e-8159-f791729db21b"
+									x={0}
+									y={0}
+									width={20}
+									height={20}
+									patternUnits="userSpaceOnUse"
+								>
+									<rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+								</pattern>
+								</defs>
+								<rect width={404} height={384} fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)" />
+							</svg>
+							<svg
+								className="hidden md:block absolute bottom-0 left-0 -mb-20 -ml-20"
+								width={404}
+								height={384}
+								fill="none"
+								viewBox="0 0 404 384"
+								aria-hidden="true"
 							>
-								<rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-							</pattern>
-							</defs>
-							<rect width={404} height={384} fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
-						</svg>
-						<div className="relative md:bg-white md:p-6">
-							<div className="lg:grid lg:grid-cols-2 lg:gap-6">
-								<div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
-									<p>
-										The Faces Fund is a set of 3,000 NFTs (Non-Fungible Tokens) focused on community driven charity.
-										An NFT is a token that is a part of the Ethereum blockchain that proves ownership of some asset.
-										There is a lot of good material that explains Ethereum and NFTs a lot better than we do and so we encourage you to go dive in!
-									</p>
-								</div>
-								<div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
-									<p>
-										How do I get a Face Token?
-									</p>
-									<ol>
-										<li>Download and install the <a href="https://metamask.io/" target="_blank" rel="noreferrer">MetaMask</a> chrome extension.</li>
-										<li>If you are creating a new account with MetaMask, then buy some Ethereum using the extension.</li>
-										<li>Once you have the plugin installed refresh the page and click "Connect Wallet" above.</li>
-										<li>Once your wallet has been connected you can Mint a new token or purchase an existing one on <a href="https://opensea.io/" target="_blank" rel="noreferrer">OpenSea.</a></li>
-									</ol>
+								<defs>
+								<pattern
+									id="7a00fe67-0343-4a3c-8e81-c145097a3ce0"
+									x={0}
+									y={0}
+									width={20}
+									height={20}
+									patternUnits="userSpaceOnUse"
+								>
+									<rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+								</pattern>
+								</defs>
+								<rect width={404} height={384} fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
+							</svg>
+							<div className="relative md:bg-white md:p-6">
+								<div className="lg:grid lg:grid-cols-2 lg:gap-6">
+									<div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
+										<p>
+											The Faces Fund is a set of 3,000 NFTs (Non-Fungible Tokens) focused on community driven charity.
+											An NFT is a token that is a part of the Ethereum blockchain that proves ownership of some asset.
+											There is a lot of good material that explains Ethereum and NFTs a lot better than we do and so we encourage you to go dive in!
+										</p>
+									</div>
+									<div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
+										<p>
+											How do I get a Face Token?
+										</p>
+										<ol>
+											<li>Download and install the <a href="https://metamask.io/" target="_blank" rel="noreferrer">MetaMask</a> chrome extension.</li>
+											<li>If you are creating a new account with MetaMask, then buy some Ethereum using the extension.</li>
+											<li>Once you have the plugin installed refresh the page and click "Connect Wallet" above.</li>
+											<li>Once your wallet has been connected you can Mint a new token or purchase an existing one on <a href="https://opensea.io/" target="_blank" rel="noreferrer">OpenSea.</a></li>
+										</ol>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</main>
 			</div>
 			<>
 				{/* Global notification live region, render this permanently at the end of the document */}
