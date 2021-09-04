@@ -13,7 +13,7 @@ import Header from './Header';
 import Mint from './Mint';
 import Roadmap from './Roadmap';
 import Team from './Team';
-import gif from './assets/148-167_40_04.gif';
+import gif from './assets/gif40_16.gif';
 
 import './App.css';
 
@@ -42,9 +42,6 @@ const App = () => {
       <main id="main">
         <Header />
         <Switch>
-          <Route exact path="/mint">
-            <Mint />
-          </Route>
           <Route path="/">
             <div className="flex items-center pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden mb-20 md:h-screen">
               <div className="mx-auto max-w-7xl lg:px-8">

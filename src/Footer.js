@@ -1,3 +1,5 @@
+import mixpanel from 'mixpanel-browser';
+
 const footerNav = {
   main: [
     { name: 'Team', href: '#team' },
@@ -38,7 +40,11 @@ const Footer = () => (
 		<nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
 			{footerNav.main.map((item) => (
 			<div key={item.name} className="px-5 py-2">
-				<a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+				<a
+          href={item.href}
+          className="text-base text-gray-500 hover:text-gray-900"
+          onClick={() => (mixpanel.track('Navigation', { src: 'footer', dest: item.name }))}
+        >
 				{item.name}
 				</a>
 			</div>
@@ -46,7 +52,14 @@ const Footer = () => (
 		</nav>
 		<div className="mt-8 flex justify-center space-x-6">
 			{footerNav.social.map((item) => (
-				<a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500" target="_blank" rel="noreferrer">
+        <a
+          key={item.name}
+          href={item.href}
+          className="text-gray-400 hover:text-gray-500"
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => (mixpanel.track('Navigation', { src: 'footer', dest: item.name }))}
+        >
 					<span className="sr-only">{item.name}</span>
 					<item.icon className="h-6 w-6" aria-hidden="true" />
 				</a>

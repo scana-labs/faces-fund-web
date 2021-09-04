@@ -1,0 +1,34 @@
+{
+    "image": "https://thefacesfund.com/image/11111.jpg",
+    "name": "The Faces Fund #0",
+    "attributes": [
+        {
+            "trait_type": "bg",
+            "value": "Grey"
+        },
+        {
+            "trait_type": "fc",
+            "value": "GreyFace"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "NerdGlasses"
+        },
+        {
+            "trait_type": "hat",
+            "value": "GoldCrown"
+        },
+        {
+            "trait_type": "ears",
+            "value": "AirPods"
+        },
+        {
+            "trait_type": "nose",
+            "value": "BlackNose"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "PizzaMouth"
+        }
+    ]
+}
